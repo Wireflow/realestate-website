@@ -1,4 +1,4 @@
-import { socials } from "./branding/SocialMedia";
+import { socials } from "../branding/SocialMedia";
 import { cloneElement } from "react";
 import { twMerge } from "tailwind-merge";
 

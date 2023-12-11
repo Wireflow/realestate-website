@@ -7,9 +7,7 @@ type LogoProps = {
 
 const PhoneNumber = ({ className }: LogoProps) => {
   return (
-    <span className={twMerge("ttext-white font-semibold", className)}>
-      (347) 129-1293
-    </span>
+    <span className={twMerge("font-semibold", className)}>(347) 129-1293</span>
   );
 };
 

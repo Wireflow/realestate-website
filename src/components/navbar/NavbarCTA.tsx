@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import React from "react";
-import PhoneNumber from "./branding/PhoneNumber";
+import PhoneNumber from "../branding/PhoneNumber";
 import { twMerge } from "tailwind-merge";
 
 type NavbarCTAProps = { mobile?: boolean; className?: string };

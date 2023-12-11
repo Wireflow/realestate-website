@@ -1,18 +1,20 @@
-import { headers } from "next/headers";
-import links from "../data/NavbarLinks.json";
+"use client";
+
+import links from "../../data/NavbarLinks.json";
 import MobileNavbar from "./MobileNavbar";
 import NavLink from "./NavLink";
 import NavbarCTA from "./NavbarCTA";
 import SocialsMedia from "./SocialsMedia";
-import Logo from "./branding/Logo";
+import Logo from "../branding/Logo";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const path = headers().get("next-url") || "/";
+  const path = usePathname();
 
   return (
-    <div className=" bg-white border-b-2 border-gray-300 flex justify-between w-full">
+    <nav className=" bg-white border-b-2 border-gray-150 flex justify-between w-full">
       <div className="py-8 px-8 lg:px-20 flex gap-24 items-center w-full">
         <div>
           <Logo className="text-black" />
@@ -31,7 +33,7 @@ const Navbar = (props: Props) => {
       <SocialsMedia />
       <NavbarCTA />
       <MobileNavbar />
-    </div>
+    </nav>
   );
 };
 

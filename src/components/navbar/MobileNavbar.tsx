@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sheet,
   SheetContent,
@@ -6,17 +8,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { headers } from "next/headers";
-import links from "../data/NavbarLinks.json";
+import links from "../../data/NavbarLinks.json";
 import NavLink from "./NavLink";
 import NavbarCTA from "./NavbarCTA";
 import SocialsMedia from "./SocialsMedia";
-import Logo from "./branding/Logo";
+import Logo from "../branding/Logo";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 const MobileNavbar = (props: Props) => {
-  const path = headers().get("next-url") || "/";
+  const path = usePathname();
 
   return (
     <Sheet>
