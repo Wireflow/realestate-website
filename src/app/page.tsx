@@ -1,16 +1,15 @@
-import Hero from "@/components/hero/Hero";
-import Testimonials from "@/components/Testimonials";
 import ContactBanner from "@/components/ContactBanner";
-import Footer from "@/components/Footer";
-import Image from "next/image";
+import Testimonials from "@/components/Testimonials";
+import Hero from "@/components/hero/Hero";
+import WhyUs from "@/components/why-us/WhyUs";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <WhyUs />
       <Testimonials />
       <ContactBanner />
-      <Footer />
     </>
   );
 }

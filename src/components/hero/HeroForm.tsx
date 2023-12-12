@@ -91,11 +91,7 @@ const HeroForm = (props: Props) => {
                 setValue("budget", parseInt(v.target.value));
               }}
             />
-            <Button
-              className="w-full py-8 mt-3"
-              buttonStyle="lightblue"
-              type="submit"
-            >
+            <Button buttonStyle="blue" className="w-full py-8 mt-4">
               Get Inquiry
             </Button>
           </form>
