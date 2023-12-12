@@ -7,7 +7,7 @@ type LogoProps = {
 
 const Logo = ({ className }: LogoProps) => {
   return (
-    <div className={twMerge("text-3xl text-white", className)}>BNGOON</div>
+    <div className={twMerge("text-6xl text-white", className)}>BNGOON</div>
   );
 };
 
