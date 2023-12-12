@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { twMerge } from "tailwind-merge";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={twMerge("max-w-[1920px] mx-auto", poppins.className)}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
