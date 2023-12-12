@@ -23,13 +23,10 @@ const MobileNavbar = (props: Props) => {
   return (
     <Sheet>
       <SheetTrigger className="static md:absolute md:bottom-8 md:right-8 lg:hidden">
-        <>
-          <Menu className="w-12 h-12 md:hidden block text-darker-blue mr-8" />
-
-          <div className="md:block hidden bg-dark-blue p-2 rounded-xl">
-            <Menu className="w-12 h-12 text-white" />
-          </div>
-        </>
+        <Menu className="w-12 h-12 md:hidden block text-darker-blue mr-8" />
+        <div className="md:block hidden bg-dark-blue p-2 rounded-xl">
+          <Menu className="w-12 h-12 text-white" />
+        </div>
       </SheetTrigger>
       <SheetContent className="bg-dark-blue p-0 flex flex-col justify-between h-full">
         <div className="p-6">

@@ -1,17 +1,18 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { Button as ShadButton } from "../ui/button";
 import { twMerge } from "tailwind-merge";
 
-type CustomButtonProps = {
+interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   buttonStyle?: "yellow" | "blue" | "outline" | "lightblue";
   className?: string;
   children?: string;
-};
+}
 
 const Button = ({
   className,
   buttonStyle = "blue",
   children,
+  ...props
 }: CustomButtonProps) => {
   const base = "rounded-md py-6 px-10 font-bold hover:bg-opacity-80 ";
   const variants = {
@@ -22,7 +23,10 @@ const Button = ({
   };
 
   return (
-    <ShadButton className={twMerge(variants[buttonStyle], className)}>
+    <ShadButton
+      className={twMerge(variants[buttonStyle], className)}
+      {...props}
+    >
       {children}
     </ShadButton>
   );

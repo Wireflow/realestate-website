@@ -1,4 +1,4 @@
-import { socials } from "../branding/SocialMedia";
+import { agent } from "../../data/branding/AgentData";
 import { cloneElement } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -12,11 +12,11 @@ const SocialsMedia = ({ mobile, iconStyle, className }: SocialMediaProps) => {
   return (
     <div
       className={twMerge(
-        `gap-6 lg:flex self-center mr-10 ${mobile ? "flex" : " hidden"}`,
+        `gap-6 xl:flex self-center mr-10 ${mobile ? "flex" : " hidden"}`,
         className
       )}
     >
-      {socials.map((platform, index) => (
+      {agent.socials.map((platform, index) => (
         <a key={index} href={platform.link} target="_black" rel="noreferror">
           {iconStyle
             ? cloneElement(platform.icon, { className: iconStyle })
