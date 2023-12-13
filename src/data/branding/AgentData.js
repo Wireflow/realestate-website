@@ -54,5 +54,9 @@ export const agent = {
       large: "image-why-1.png",
       small: "image-why-2.jpg",
     },
+    testimonials: {
+      desktop: "TestimonialHome.jpg",
+      mobile: "TestimonialMobile.jpg",
+    },
   },
 };

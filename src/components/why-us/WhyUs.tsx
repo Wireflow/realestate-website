@@ -1,15 +1,18 @@
 import React from "react";
 import WhyText from "./WhyText";
 import WhyGrid from "./WhyGrid";
+import SectionContainer from "../SectionContainer";
 
 type Props = {};
 
 const WhyUs = (props: Props) => {
   return (
-    <div className=" bg-light-blue p-8 md:p-16 lg:p-28 flex gap-8 xl:gap-28 items-center justify-center xl:flex-row flex-col ">
-      <WhyText />
-      <WhyGrid />
-    </div>
+    <SectionContainer background="light-blue">
+      <div className="flex gap-8 xl:gap-28 items-center justify-center xl:flex-row flex-col ">
+        <WhyText />
+        <WhyGrid />
+      </div>
+    </SectionContainer>
   );
 };
 

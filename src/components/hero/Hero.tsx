@@ -3,22 +3,23 @@ import React from "react";
 import HeroText from "./HeroText";
 import HeroForm from "./HeroForm";
 import { agent } from "../../data/branding/AgentData";
+import SectionContainer from "../SectionContainer";
 
 type Props = {};
 
 const Hero = (props: Props) => {
+  const { mainImage } = agent.images.hero;
+
   return (
-    <div
-      className="flex flex-col gap-10 justify-center z-10 px-4 py-8 w-full md:gap-20 lg:px-[10rem] lg:py-20 lg:flex-row lg:gap-40"
-      style={{
-        backgroundImage: `url(${agent.images.hero.mainImage})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
+    <SectionContainer
+      backgroundImage={mainImage}
+      className="bg-no-repeat bg-cover"
     >
-      <HeroText />
-      <HeroForm />
-    </div>
+      <div className="flex flex-col gap-10 justify-center z-10 w-full md:gap-20 lg:px-[8rem] lg:flex-row lg:gap-40">
+        <HeroText />
+        <HeroForm />
+      </div>
+    </SectionContainer>
   );
 };
 
