@@ -30,7 +30,7 @@ const WhyText = (props: Props) => {
     },
   ];
   return (
-    <Card className="bg-transparent border-none outline-none rounded-none max-w-[500px] shadow-none">
+    <Card className="bg-transparent border-none outline-none rounded-none flex-1 xl:flex-auto xl:max-w-[500px] shadow-none">
       <CardHeader>
         <CardTitle className="text-[2rem]">
           Why Choose {agent.info.firstname}?

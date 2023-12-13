@@ -9,7 +9,7 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div
-      className="z-10 px-4 lg:px-[10rem] py-8 lg:py-20 w-full flex lg:flex-row flex-col gap-10 md:gap-20 lg:gap-40 justify-center"
+      className="flex flex-col gap-10 justify-center z-10 px-4 py-8 w-full md:gap-20 lg:px-[10rem] lg:py-20 lg:flex-row lg:gap-40"
       style={{
         backgroundImage: `url(${agent.images.hero.mainImage})`,
         backgroundRepeat: "no-repeat",

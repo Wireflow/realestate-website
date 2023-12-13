@@ -5,6 +5,7 @@ export const agent = {
     firstname: "Nader",
     lastname: "M",
     broker: "Coastal Realty 1 Corp",
+    experienceYears: 10,
     image: "",
     contact: {
       phone: 3471291293,
@@ -19,7 +20,7 @@ export const agent = {
   },
   sales: {
     servedClients: 200,
-    soldProperties: 200,
+    soldProperties: "10,000",
     rentedHomes: 800,
   },
   socials: [
@@ -48,6 +49,10 @@ export const agent = {
   images: {
     hero: {
       mainImage: "hero-img.jpg",
+    },
+    whyus: {
+      large: "image-why-1.png",
+      small: "image-why-2.jpg",
     },
   },
 };
