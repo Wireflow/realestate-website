@@ -1,15 +1,14 @@
 import React from "react";
-import Logo from "./branding/Logo";
+import Logo from "../branding/Logo";
 import Link from "next/link";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
-import { agent } from "../data/branding/AgentData";
+import { agent } from "../../data/branding/agent-data";
 import formatPhone from "@/utils/formatPhone";
 
 type Props = {};
 
 const Footer = (props: Props) => {
   const phone = formatPhone(agent.info.contact.phone);
-
   const { address, city } = agent.info.location;
   const { email } = agent.info.contact;
 

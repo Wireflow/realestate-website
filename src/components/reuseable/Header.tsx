@@ -6,10 +6,10 @@ type SectionHeaderProps = {
   description?: string;
   actionTitle?: string;
   className?: string;
-  onActionClick?: (e: any) => void;
+  onActionClick?: () => void;
 };
 
-const SectionHeader = ({
+const Header = ({
   title,
   description,
   actionTitle,
@@ -38,4 +38,4 @@ const SectionHeader = ({
   );
 };
 
-export default SectionHeader;
+export default Header;

@@ -10,7 +10,7 @@ type TestimonialProps = {
 
 const Testimonial = ({ review, name, stars = 5 }: TestimonialProps) => {
   return (
-    <Card className="shadow-none xl:max-w-[420px] h-full">
+    <Card className="shadow-none xl:max-w-[420px] h-full p-2">
       <CardHeader className="py-3">
         <CardTitle className="flex gap-2">
           {Array.from({ length: stars }).map((v, i) => (

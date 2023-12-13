@@ -8,7 +8,7 @@ type SectionContainerProps = {
   background?: "white" | "light-blue" | "black" | "dark-blue";
 };
 
-const SectionContainer = ({
+const Section = ({
   children,
   backgroundImage,
   className,
@@ -35,4 +35,4 @@ const SectionContainer = ({
   );
 };
 
-export default SectionContainer;
+export default Section;

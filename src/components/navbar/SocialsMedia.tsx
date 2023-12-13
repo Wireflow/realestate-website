@@ -1,4 +1,4 @@
-import { agent } from "../../data/branding/AgentData";
+import { agent } from "../../data/branding/agent-data";
 import { cloneElement } from "react";
 import { twMerge } from "tailwind-merge";
 

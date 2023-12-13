@@ -1,6 +1,6 @@
 "use client";
 
-import links from "../../data/NavbarLinks.json";
+import links from "../../data/nav-links.json";
 import MobileNavbar from "./MobileNavbar";
 import NavLink from "./NavLink";
 import NavbarCTA from "./NavbarCTA";

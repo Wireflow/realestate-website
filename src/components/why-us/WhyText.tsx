@@ -1,5 +1,5 @@
 import React from "react";
-import { agent } from "../../data/branding/AgentData";
+import { agent } from "../../data/branding/agent-data";
 import {
   Card,
   CardContent,

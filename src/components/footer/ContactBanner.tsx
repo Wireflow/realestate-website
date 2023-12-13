@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "./ui/button";
-import phone from "../../public/phone.png";
+import { Button } from "../ui/button";
 import Image from "next/image";
-import { agent } from "../data/branding/AgentData";
+import { agent } from "../../data/branding/agent-data";
 import formatPhone from "@/utils/formatPhone";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 type Props = {};
 
@@ -19,7 +19,7 @@ const ContactBanner = (props: Props) => {
       <div className="flex items-center gap-5">
         <button>Contact us</button>
         <Link className="flex gap-2 items-center" href={`tel:${phoneNumber}`}>
-          <Image src={phone} alt="phone" width={20} height={20} />
+          <Phone className="w-4 h-4" />
           {phoneNumber}
         </Link>
       </div>

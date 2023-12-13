@@ -1,6 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { agent } from "../../data/branding/AgentData";
+import { agent } from "../../data/branding/agent-data";
 import formatPhone from "@/utils/formatPhone";
 import Link from "next/link";
 
