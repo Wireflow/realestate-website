@@ -8,18 +8,22 @@ type CardProps = {
     Title?: string;
     Description?: string;
     Icon?: string;
+    CardContainerStyle?: string;
+    IconContainerStyle?: string;
+    CardTitleStyle?: string;
+    CardDescriptionStyle?: string;
 
 
 }
 
-const Card = ({ ButtonType, ButtonText, Title, Description, Icon } : CardProps) => {
+const Card = ({ ButtonType, ButtonText, Title, Description, Icon, CardContainerStyle,IconContainerStyle, CardTitleStyle, CardDescriptionStyle } : CardProps) => {
   return (
-    <div className='flex flex-col items-center gap-5'>
-     <div className='rounded-full bg-light-blue w-[100px] h-[100px] flex justify-center items-center'>
+    <div className={CardContainerStyle}>
+     <div className={IconContainerStyle}>
          <Image src={`/${Icon}`} width={40} height={40} alt='service-icon'/>
      </div>
-     <h2 className='text-2xl font-bold'>{Title}</h2>
-     <p className='w-80 text-center text-md'>{Description}</p>
+     <h2 className={CardTitleStyle}>{Title}</h2>
+     <p className={CardDescriptionStyle}>{Description}</p>
      <Button buttonStyle={ButtonType}>{ButtonText}</Button>
     </div>
   )
