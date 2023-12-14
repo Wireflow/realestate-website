@@ -1,10 +1,13 @@
+import PageBanner from '@/components/reuseable/PageBanner'
 import React from 'react'
 
 type Props = {}
 
 const Services = (props: Props) => {
   return (
-    <div>Services</div>
+    <div>
+      <PageBanner PageName='Services' PagePath='Home / Services'/>
+    </div>
   )
 }
 
