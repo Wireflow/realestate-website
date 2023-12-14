@@ -12,8 +12,6 @@ type CardProps = {
     IconContainerStyle?: string;
     CardTitleStyle?: string;
     CardDescriptionStyle?: string;
-
-
 }
 
 const Card = ({ ButtonType, ButtonText, Title, Description, Icon, CardContainerStyle,IconContainerStyle, CardTitleStyle, CardDescriptionStyle } : CardProps) => {

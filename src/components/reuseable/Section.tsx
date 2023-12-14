@@ -16,7 +16,7 @@ const Section = ({
   background = "white",
   maxWidth = 1420,
 }: SectionContainerProps) => {
-  const bg_variants = {
+  const bg_variants = { 
     white: "bg-white",
     "light-blue": "bg-light-blue",
     black: "bg-darker-blue",

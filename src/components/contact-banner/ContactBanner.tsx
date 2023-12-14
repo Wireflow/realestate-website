@@ -6,7 +6,7 @@ import Button from "../reuseable/Button";
 
 type Props = {};
 
-const ContactBanner = (props: Props) => {
+const ContactBanner = (props: Props) => { 
   return (
     <div className="flex justify-center text-center  items-center flex-col xl:flex-row md:py-[50px] py-10 bg-[#040720] text-white  xl:gap-[150px] gap-10">
       <div>
