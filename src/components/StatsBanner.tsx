@@ -13,14 +13,14 @@ const StatsBanner = (props: Props) => {
 
   return (
     <Section background="dark-blue">
-      <div className="flex flex-wrap">
+      <div className="flex gap-3 flex-wrap">
         {stats.map((stat, index) => (
           <div
             className="grid gap-2 text-white flex-1 text-center p-2"
             key={index}
           >
-            <p className="text-5xl font-bold">{stat.stat}</p>
-            <p>{stat.text}</p>
+            <p className="xl:text-5xl text-4xl font-bold">{stat.stat}</p>
+            <p className="xl:text-xl text-sm">{stat.text}</p>
           </div>
         ))}
       </div>
