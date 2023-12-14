@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../branding/Logo";
-import Logo from "../branding/Logo";
 import Link from "next/link";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 import { agent } from "../../data/branding/agent-data";
