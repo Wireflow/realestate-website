@@ -7,8 +7,8 @@ type Props = {};
 
 const WhyUs = (props: Props) => {
   return (
-    <Section background="light-blue">
-      <div className="flex gap-8 xl:gap-28 items-center justify-center xl:flex-row flex-col ">
+    <Section background="light-blue" maxWidth={1400}>
+      <div className="flex gap-8 xl:gap-28 items-center justify-between xl:flex-row flex-col">
         <WhyText />
         <WhyGrid />
       </div>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
 import { twMerge } from "tailwind-merge";
+import { agent } from "@/data/branding/agent-data";
+import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import ContactBanner from "@/components/footer/ContactBanner";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Samantha Real Estate",
-  description: "Samantha M. Real Estate Agent Site",
+  title: `${agent.info.firstname} Real Estate`,
+  description: `${agent.info.firstname} ${agent.info.lastname} Real Estate Agent Site`,
 };
 
 export default function RootLayout({

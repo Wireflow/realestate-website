@@ -1,7 +1,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-type SectionHeaderProps = {
+type HeaderProps = {
   title?: string;
   description?: string;
   actionTitle?: string;
@@ -15,18 +15,18 @@ const Header = ({
   actionTitle,
   onActionClick,
   className,
-}: SectionHeaderProps) => {
+}: HeaderProps) => {
   return (
     <div
       className={twMerge(
-        "flex justify-between flex-col md:flex-row items-center",
+        "flex justify-between flex-col md:flex-row items-center mb-10",
         className
       )}
     >
       <div className="flex flex-col gap-3">
-        <h1 className="font-semibold text-4xl text-center md:text-start">
+        <h2 className="font-semibold text-4xl text-center md:text-start">
           {title}
-        </h1>
+        </h2>
         <p className="text-md font-medium text-gray-400 text-center md:text-start">
           {description}
         </p>

@@ -20,7 +20,7 @@ export const agent = {
   },
   sales: {
     servedClients: 200,
-    soldProperties: "10,000",
+    soldProperties: 10000,
     rentedHomes: 800,
   },
   socials: [

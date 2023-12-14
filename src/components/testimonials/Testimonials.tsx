@@ -18,9 +18,8 @@ const Testimonials = (props: Props) => {
         title="Hear What They Say"
         description="Testimonials From Clients"
         actionTitle="See All Testimonials"
-        className="md:max-w-[1320px] mx-auto"
       />
-      <div className="flex xl:flex-row flex-col mt-10 gap-6 md:gap-10 justify-center items-center">
+      <div className="flex xl:flex-row flex-col mt-10 gap-6 md:gap-10 justify-between items-center">
         <Image
           src={"/" + desktop}
           alt="desktop"

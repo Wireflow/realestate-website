@@ -6,6 +6,7 @@ type SectionContainerProps = {
   backgroundImage?: string;
   className?: string;
   background?: "white" | "light-blue" | "black" | "dark-blue";
+  maxWidth?: string | number;
 };
 
 const Section = ({
@@ -13,6 +14,7 @@ const Section = ({
   backgroundImage,
   className,
   background = "white",
+  maxWidth = 1420,
 }: SectionContainerProps) => {
   const bg_variants = {
     white: "bg-white",
@@ -30,7 +32,9 @@ const Section = ({
       )}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {children}
+      <div style={{ maxWidth: maxWidth }} className="mx-auto">
+        {children}
+      </div>
     </div>
   );
 };

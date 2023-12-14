@@ -12,7 +12,7 @@ const Hero = (props: Props) => {
 
   return (
     <Section backgroundImage={mainImage} className="bg-no-repeat bg-cover">
-      <div className="flex flex-col gap-10 justify-center z-10 w-full md:gap-20 lg:px-[8rem] lg:flex-row lg:gap-40">
+      <div className="flex flex-col gap-10 justify-center z-10 w-full md:gap-20 lg:flex-row lg:gap-40">
         <HeroText />
         <HeroForm />
       </div>
