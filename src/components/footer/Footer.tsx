@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./branding/Logo";
+import Logo from "../branding/Logo";
 import Link from "next/link";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
@@ -9,8 +9,8 @@ const Footer = (props: Props) => {
   return (
     <div className="bg-black text-white ">
       {/* Top body of the Footer Containing Links and Info About Site */}
-      <div className="flex flex-wrap md:flex-nowrap sm:justify-center pl-10 xl:gap-40 gap-20 py-20">
-        <div className="flex flex-col gap-4">
+      <div className="flex flex-wrap md:flex-nowrap md:justify-center  md:pl-0 pl-10 xl:gap-40 gap-20 py-20">
+        <div className="flex flex-col gap-4 md:pl-5">
           <Logo />
           <p className="w-80 text-[16px]">
             Copyright @ 2023 MS.NEWHOUSE Powered by Wireflow
@@ -64,7 +64,7 @@ const Footer = (props: Props) => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-5 ">
+        <div className="flex gap-5 sm:mb-0 mb-10">
           <p className="text-md">Privacy</p>
           <p className="text-md">Terms</p>
         </div>
