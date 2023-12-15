@@ -13,12 +13,12 @@ const Footer = (props: Props) => {
   const { email } = agent.info.contact;
 
   return (
-    <footer className="bg-black text-white ">
+    <footer className="bg-black text-white">
       {/* Top body of the Footer Containing Links and Info About Site */}
       <div className="flex flex-wrap md:flex-nowrap md:justify-center  md:pl-0 pl-10 xl:gap-40 gap-20 py-20">
         <div className="flex flex-col gap-4 md:pl-5">
           <Logo />
-          <p className="w-80 text-[16px]">
+          <p className="max-w-[20rem] text-[16px]">
             Copyright @ 2023 {agent.info.broker} Powered by{" "}
             <Link href={"https://wireflow.us"} target="_blank" rel="noreferrer">
               Wireflow
@@ -28,7 +28,7 @@ const Footer = (props: Props) => {
         <div className="flex gap-20 flex-wrap">
           <div className="flex flex-col gap-4">
             <h3 className="text-[32px] font-medium">About Me</h3>
-            <p className="w-80">
+            <p className="max-w-[20rem]">
               With over {agent.info.experienceYears} of experience in the real
               estate market, I have honed my skills to navigate the complexities
               of the industry. Whether you&apos;re a first-time buyer, seasoned
@@ -70,7 +70,7 @@ const Footer = (props: Props) => {
               rel="noreferrer"
               aria-label="Instagram"
             >
-              <InstagramLogoIcon className="w-6 h-24" />
+              <InstagramLogoIcon className="w-6 h-6" />
             </Link>
             {/* Repeat the above pattern for other social links */}
           </div>
