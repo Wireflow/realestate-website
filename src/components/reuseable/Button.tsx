@@ -18,7 +18,9 @@ const Button = ({
   const variants = {
     yellow: base + "bg-yellow text-darker-blue",
     blue: base + "bg-darker-blue text-white",
-    outline: base + "bg-transparent border-2 border-dark-blue text-darker-blue",
+    outline:
+      base +
+      "bg-transparent border-2 border-dark-blue text-darker-blue hover:text-white",
     lightblue: base + "bg-dark-blue text-white",
   };
 

@@ -12,7 +12,7 @@ const StatsBanner = (props: Props) => {
   ];
 
   return (
-    <Section background="dark-blue" className="md:p-10 lg:p-14">
+    <Section background="dark-blue" size="md">
       <div className="flex gap-3 flex-wrap">
         {stats.map((stat, index) => (
           <div
