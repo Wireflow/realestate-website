@@ -7,6 +7,7 @@ type HeaderProps = {
   actionTitle?: string;
   className?: string;
   size?: "sm" | "md" | "lg" | "default";
+  action?: boolean;
   onActionClick?: () => void;
 };
 
@@ -14,6 +15,7 @@ const Header = ({
   title,
   description,
   actionTitle,
+  action = false,
   onActionClick,
   className,
   size = "default",
@@ -45,9 +47,13 @@ const Header = ({
           {description}
         </p>
       </div>
-      <button className="font-bold mt-4 md:mt-2" onClick={onActionClick}>
-        {actionTitle}
-      </button>
+      {action ? (
+        <button className="font-bold mt-4 md:mt-2" onClick={onActionClick}>
+          {actionTitle}
+        </button>
+      ) : (
+        null
+      )}
     </div>
   );
 };
