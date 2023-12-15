@@ -74,7 +74,7 @@ const Select = ({
                   <SelectItem
                     key={i}
                     value={val}
-                    className={twMerge("capitalize", className)}
+                    className={twMerge("capitalize py-3", className)}
                   >
                     {val}
                   </SelectItem>

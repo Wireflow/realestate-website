@@ -1,14 +1,12 @@
-import PageBanner from '@/components/reuseable/PageBanner'
-import React from 'react'
+import PageBanner from "@/components/reuseable/PageBanner";
+import React from "react";
+import ContactUs from "./contact-components/ContactUs";
+import ContactPage from "./contact-components/ContactPage";
 
-type Props = {}
+type Props = {};
 
 const Contact = (props: Props) => {
-  return (
-    <div>
-       <PageBanner PageName='Contact Us' PagePath='Home / Contact Us'/>
-    </div>
-  )
-}
+  return <ContactPage />;
+};
 
-export default Contact
+export default Contact;

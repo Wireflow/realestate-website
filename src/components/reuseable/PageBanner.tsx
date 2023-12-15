@@ -8,7 +8,7 @@ type BannerProps = {
 
 const PageBanner = ({ PageName, PagePath }: BannerProps) => {
   return (
-    <Section className="text-center ">
+    <Section className="text-center text-white" background="dark-blue">
       <h2 className="text-5xl mb-2 font-medium">{PageName}</h2>
       <p className="text-md font-medium">{PagePath}</p>
     </Section>

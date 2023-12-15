@@ -1,7 +1,7 @@
 "use client";
 
 import { Contact, Inquiry } from "@/types/types";
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from "react";
 import { FieldPath, RegisterOptions } from "react-hook-form";
 import {
   FormControl,
@@ -11,10 +11,10 @@ import {
   FormLabel,
   FormMessage,
 } from "../ui/form";
-import { Input } from "../ui/input";
+import { Textarea as ShadTextarea } from "../ui/textarea";
 import { twMerge } from "tailwind-merge";
 
-interface FieldProps extends InputHTMLAttributes<HTMLInputElement> {
+interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   control: any;
   name: FieldPath<Inquiry | Contact>;
   label?: string;
@@ -30,7 +30,7 @@ interface FieldProps extends InputHTMLAttributes<HTMLInputElement> {
     | undefined;
 }
 
-const Field = ({
+const Textarea = ({
   control,
   name,
   label,
@@ -49,10 +49,10 @@ const Field = ({
         <FormItem>
           <FormLabel className={labelStyle}>{label}</FormLabel>
           <FormControl>
-            <Input
+            <ShadTextarea
               {...field}
               {...props}
-              className={twMerge("py-6 bg-white", className)}
+              className={twMerge("", className)}
             />
           </FormControl>
           <FormDescription>{description}</FormDescription>
@@ -63,4 +63,4 @@ const Field = ({
   );
 };
 
-export default Field;
+export default Textarea;

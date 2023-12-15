@@ -50,17 +50,11 @@ const HeroForm = (props: Props) => {
         <Form {...form}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <p className="font-semibold">Your Information</p>
-            <Field
-              control={control}
-              name="name"
-              placeholder="your name"
-              className="py-6"
-            />
+            <Field control={control} name="name" placeholder="your name" />
             <Field
               control={control}
               name="phone"
               placeholder="your phone number"
-              className="py-6"
               type="number"
               onChange={(v) => {
                 setValue("phone", parseInt(v.target.value));
@@ -72,20 +66,17 @@ const HeroForm = (props: Props) => {
               control={control}
               name="preference"
               placeholder="type of property you are interested in"
-              className="py-3"
               options={preferences}
             />
             <Field
               control={control}
               name="location"
               placeholder="what is your preferred location?"
-              className="py-6"
             />
             <Field
               control={control}
               name="budget"
               placeholder="what is your budget?"
-              className="py-6"
               type="number"
               onChange={(v) => {
                 setValue("budget", parseInt(v.target.value));

@@ -6,6 +6,7 @@ type HeaderProps = {
   description?: string;
   actionTitle?: string;
   className?: string;
+  size?: "sm" | "md" | "lg" | "default";
   onActionClick?: () => void;
 };
 
@@ -15,7 +16,15 @@ const Header = ({
   actionTitle,
   onActionClick,
   className,
+  size = "default",
 }: HeaderProps) => {
+  const size_variants = {
+    default: "text-4xl",
+    sm: "text-2xl",
+    md: "text-3xl",
+    lg: "text-4xl lg:text-7xl",
+  };
+
   return (
     <div
       className={twMerge(
@@ -24,7 +33,12 @@ const Header = ({
       )}
     >
       <div className="flex flex-col gap-3">
-        <h2 className="font-semibold text-4xl text-center md:text-start">
+        <h2
+          className={twMerge(
+            "font-semibold text-center md:text-start",
+            size_variants[size]
+          )}
+        >
           {title}
         </h2>
         <p className="text-md font-medium text-gray-400 text-center md:text-start">
