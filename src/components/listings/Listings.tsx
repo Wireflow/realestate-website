@@ -12,6 +12,7 @@ const Listings = (props: Props) => {
   return (
     <Section>
       <Header
+      action={true}
         title="Explore Our Latest Listings"
         description="Discover a diverse range of properties and find your dream home."
         actionTitle="Inquire About Listing"

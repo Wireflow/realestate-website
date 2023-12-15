@@ -15,6 +15,7 @@ const Testimonials = (props: Props) => {
   return (
     <Section background="light-blue">
       <Header
+        action={true}
         title="Hear What They Say"
         description="Testimonials From Clients"
         actionTitle="See All Testimonials"

@@ -9,6 +9,7 @@ const Services = (props: Props) => {
   return (
     <Section>
       <Header
+        action={true}
         title="Discover Our Services"
         description="Turning Keys, Fulfilling Dreams"
         actionTitle="See All Services"
@@ -19,32 +20,38 @@ const Services = (props: Props) => {
           CardTitleStyle="text-2xl font-bold"
           IconContainerStyle="rounded-full bg-light-blue w-[100px] h-[100px] flex justify-center items-center"
           CardContainerStyle="flex flex-col items-center gap-5 border px-10 py-20 rounded-xl"
-          Icon="SellIcon.png"
+          image="SellIcon.png"
           Title="Sell A Property"
           Description="Maximize your property's appeal effortlessly. As your dedicated real estate professional"
           ButtonText="Learn More"
           ButtonType="outline"
+          ImageWidth={40}
+          ImageHeight={40}
         />
         <Card
           CardDescriptionStyle="text-center text-sm"
           CardTitleStyle="text-2xl font-bold"
           IconContainerStyle="rounded-full bg-light-blue w-[100px] h-[100px] flex justify-center items-center"
           CardContainerStyle="flex flex-col items-center gap-5 border px-10 py-20 rounded-xl"
-          Icon="BuyIcon.png"
+          image="BuyIcon.png"
           Title="Buy A Property"
           Description="Maximize your property's appeal effortlessly. As your dedicated real estate professional"
           ButtonText="Learn More"
+          ImageWidth={40}
+          ImageHeight={40}
         />
         <Card
           CardDescriptionStyle="text-center text-sm"
           CardTitleStyle="text-2xl font-bold"
           IconContainerStyle="rounded-full bg-light-blue w-[100px] h-[100px] flex justify-center items-center"
           CardContainerStyle="flex flex-col items-center gap-5 border px-10 py-20 rounded-xl  col-span-full xl:col-span-1"
-          Icon="RentIcon.png"
+          image="RentIcon.png"
           Title="Rent A Property"
           Description="Maximize your property's appeal effortlessly. As your dedicated real estate professional"
           ButtonText="Learn More"
           ButtonType="outline"
+          ImageWidth={40}
+          ImageHeight={40}
         />
       </div>
     </Section>
