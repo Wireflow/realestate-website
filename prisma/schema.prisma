@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now()) @db.Timestamp()
+  updatedAt DateTime @updatedAt @db.Timestamp()
+}
+
+enum PropertyType {
+  Multi
+  Townhomes
+  Houses
+  Condos
+  Land
+  Apartments
+  Commercial
+}
+
+model Inquiry {
+  id           String       @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  phone        Int
+  propertyType PropertyType
+  location     String
+  budget       Int
+  createdAt    DateTime     @default(now()) @db.Timestamp()
+  updatedAt    DateTime     @updatedAt @db.Timestamp()
+}

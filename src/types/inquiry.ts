@@ -10,11 +10,11 @@ export const InquirySchema = z.object({
     .min(1),
 
   preference: z.enum([
-    "Multi-family",
+    "Multi",
     "Townhomes",
     "Houses",
-    "Condos/Co-ops",
-    "Lots/Land",
+    "Condos",
+    "Land",
     "Apartments",
     "Commercial",
   ]),
@@ -33,11 +33,11 @@ export const InquirySchema = z.object({
 });
 
 export const preferences = [
-  "Multi-family",
+  "Multi",
   "Townhomes",
   "Houses",
-  "Condos/Co-ops",
-  "Lots/Land",
+  "Condos",
+  "Land",
   "Apartments",
   "Commercial",
 ];

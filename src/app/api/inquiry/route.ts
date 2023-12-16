@@ -1,23 +1,26 @@
 import { connectToDatabase } from "@/lib/connectdb";
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../prisma";
-import { ContactSchema } from "@/types/contact";
+import { InquirySchema } from "@/types/inquiry";
 
 export const POST = async (req: Request, res: Response) => {
   try {
     await connectToDatabase();
     const body = await req.json();
-    const { name, email, message } = ContactSchema.parse(body);
+    const { name, phone, preference, location, budget } =
+      InquirySchema.parse(body);
 
-    const userMessage = await prisma.message.create({
+    const userInquiry = await prisma.inquiry.create({
       data: {
         name,
-        email,
-        message,
+        phone,
+        propertyType: preference,
+        location,
+        budget,
       },
     });
 
-    return NextResponse.json({ message: userMessage }, { status: 200 });
+    return NextResponse.json({ inquiry: userInquiry }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { error: "Internal Server Error" },
