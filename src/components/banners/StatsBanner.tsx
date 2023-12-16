@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./reuseable/Section";
+import Section from "../reuseable/Section";
 
 type Props = {};
 

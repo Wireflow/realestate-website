@@ -5,6 +5,12 @@ import React from "react";
 type Props = {};
 
 const Discover = (props: Props) => {
+  const services_stats = [
+    { title: "Real Estate Investment", percentage: 90 },
+    { title: "Rental Properties", percentage: 90 },
+    { title: "Property Managment", percentage: 90 },
+  ];
+
   return (
     <Section>
       <div className="grid xl:grid-cols-2  gap-10">
@@ -24,24 +30,17 @@ const Discover = (props: Props) => {
             </p>
           </div>
           <div className="grid grid-cols-1 w-full gap-3">
-            <div className="flex sm:justify-between justify-center gap-3 flex-col sm:flex-row  items-center px-10 py-5 bg-gray-100 rounded-xl ">
-              <h2 className="font-bold text-[24px]">Real Estate Investment</h2>
-              <p className="bg-yellow px-3 py-1 text-md flex justify-center items-center rounded-lg font-semibold">
-                90%
-              </p>
-            </div>
-            <div className="flex sm:justify-between justify-center gap-3 flex-col sm:flex-row  items-center px-10 py-5 bg-gray-100 rounded-xl ">
-              <h2 className="font-bold text-[24px]">Rental Properties</h2>
-              <p className="bg-yellow px-3 py-1 text-md flex justify-center items-center rounded-lg font-semibold">
-                90%
-              </p>
-            </div>
-            <div className="flex sm:justify-between justify-center gap-3 flex-col sm:flex-row  items-center px-10 py-5 bg-gray-100 rounded-xl ">
-              <h2 className="font-bold text-[24px]">Property Managment</h2>
-              <p className="bg-yellow px-3 py-1 text-md flex justify-center items-center rounded-lg font-semibold">
-                90%
-              </p>
-            </div>
+            {services_stats.map((stat, index) => (
+              <div
+                key={index}
+                className="flex sm:justify-between justify-center gap-3 flex-col sm:flex-row  items-center px-10 py-5 bg-gray-100 rounded-xl "
+              >
+                <h2 className="font-bold text-[24px]">{stat.title}</h2>
+                <p className="bg-yellow px-3 py-1 text-md flex justify-center items-center rounded-lg font-semibold">
+                  {stat.percentage}%
+                </p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="bg-slate-800 flex items-end justify-end rounded-xl DiscoverImage ">

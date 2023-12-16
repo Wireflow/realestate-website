@@ -1,7 +1,7 @@
 import React from "react";
-import ContactUs from "./ContactUs";
-import PageBanner from "@/components/reuseable/PageBanner";
-import FAQ from "./FAQ";
+import ContactUs from "./contact-components/ContactUs";
+import PageBanner from "@/components/banners/PageBanner";
+import FAQ from "./contact-components/FAQ";
 
 type Props = {};
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../reuseable/Card";
-import Section from "../reuseable/Section";
-import Header from "../reuseable/Header";
+import Card from "../../../components/reuseable/Card";
+import Section from "../../../components/reuseable/Section";
+import Header from "../../../components/reuseable/Header";
 
 type Props = {};
 

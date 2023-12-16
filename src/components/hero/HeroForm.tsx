@@ -10,11 +10,11 @@ import {
   CardTitle,
 } from "../ui/card";
 import { useForm } from "react-hook-form";
-import { Inquiry, InquirySchema } from "@/types/types";
+import { Inquiry, InquirySchema } from "@/types/inquiry";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Field from "../form/Field";
 import Select from "../form/Select";
-import { preferences } from "@/types/types";
+import { preferences } from "@/types/inquiry";
 import Button from "../reuseable/Button";
 
 type Props = {};

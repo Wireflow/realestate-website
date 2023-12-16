@@ -4,7 +4,7 @@ import Field from "@/components/form/Field";
 import Textarea from "@/components/form/Textarea";
 import Button from "@/components/reuseable/Button";
 import { Form } from "@/components/ui/form";
-import { Contact, ContactSchema } from "@/types/types";
+import { Contact, ContactSchema } from "@/types/contact";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";

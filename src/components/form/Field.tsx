@@ -1,6 +1,6 @@
 "use client";
 
-import { Contact, Inquiry } from "@/types/types";
+import { Contact, Inquiry } from "@/types/inquiry";
 import { InputHTMLAttributes, ReactNode } from "react";
 import { FieldPath, RegisterOptions } from "react-hook-form";
 import {

@@ -14,12 +14,12 @@ const Agents = (props: Props) => {
         description="Our Agents: Turning dreams into keys, one property at a time"
         actionTitle="Become Our Agent"
       />
-      <div className="grid lg:grid-cols-4 md:grid-cols-3  grid-cols-2 gap-10 auto-cols-min">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 justify-center items-center gap-10">
         <Card
           CardDescriptionStyle=" text-sm font-medium"
           CardTitleStyle=" text-[20px] font-semibold"
           IconContainerStyle=""
-          CardContainerStyle="flex flex-col gap-3 justify-center items-start"
+          CardContainerStyle="flex flex-col gap-3 justify-center items-start w-full"
           image="agent1.jpg"
           Title="Mustafa Jajeh"
           Description="Senior Agent"
@@ -29,7 +29,7 @@ const Agents = (props: Props) => {
           ImageHeight={400}
           ImageStyle="rounded-xl"
         />
-             <Card
+        <Card
           CardDescriptionStyle=" text-sm font-medium"
           CardTitleStyle=" text-[20px] font-semibold"
           IconContainerStyle=""
@@ -43,7 +43,7 @@ const Agents = (props: Props) => {
           ImageHeight={400}
           ImageStyle="rounded-xl"
         />
-             <Card
+        <Card
           CardDescriptionStyle=" text-sm font-medium"
           CardTitleStyle=" text-[20px] font-semibold"
           IconContainerStyle=""
@@ -57,7 +57,7 @@ const Agents = (props: Props) => {
           ImageHeight={400}
           ImageStyle="rounded-xl"
         />
-             <Card
+        <Card
           CardDescriptionStyle=" text-sm font-medium"
           CardTitleStyle=" text-[20px] font-semibold"
           IconContainerStyle=""
