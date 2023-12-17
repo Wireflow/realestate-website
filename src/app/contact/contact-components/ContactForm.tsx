@@ -5,13 +5,15 @@ import Textarea from "@/components/form/Textarea";
 import Button from "@/components/reuseable/Button";
 import { Form } from "@/components/ui/form";
 import { Contact, ContactSchema } from "@/types/contact";
+import sendMessage from "@/use-cases/sendMessage";
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 type Props = {};
 
 const ContactForm = (props: Props) => {
+  const [error, setError] = useState<string | undefined>(undefined);
   const form = useForm<Contact>({
     resolver: zodResolver(ContactSchema),
     defaultValues: {
@@ -21,11 +23,24 @@ const ContactForm = (props: Props) => {
     },
   });
 
-  const { handleSubmit, control, setValue, getValues } = form;
+  const {
+    handleSubmit,
+    control,
+    setValue,
+    getValues,
+    formState: { isSubmitSuccessful, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: Contact) => {
-    console.log(data);
+  const onSubmit = async (data: Contact) => {
+    try {
+      setError(undefined);
+      const message = await sendMessage(data);
+    } catch (error) {
+      console.error(error);
+      setError("Something went wrong!");
+    }
   };
+
   return (
     <Form {...form}>
       <form
@@ -55,9 +70,15 @@ const ContactForm = (props: Props) => {
           label="Your Message"
           placeholder="Writing your message here..."
         />
-        <Button buttonStyle="lightblue" className="w-full py-8 mt-4">
+        <Button
+          disabled={isSubmitting}
+          buttonStyle="lightblue"
+          className="w-full py-8 mt-4"
+        >
           Send Message
         </Button>
+        {error ? <p className="text-red-500 text-base">{error}</p> : null}
+        {isSubmitSuccessful ? <p>Message sent successfully!</p> : null}
       </form>
     </Form>
   );

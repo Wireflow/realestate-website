@@ -20,7 +20,7 @@ export const POST = async (req: Request, res: Response) => {
       },
     });
 
-    return NextResponse.json({ inquiry: userInquiry }, { status: 200 });
+    return NextResponse.json({ data: userInquiry }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { error: "Internal Server Error" },
