@@ -8,7 +8,7 @@ const Video = (props: Props) => {
     <Section>
         <div>
             <video className='rounded-2xl ' controls width="100%">
-                <source src="your-video-source.mp4" type="video/mp4" />
+                <source src="FamilyVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>

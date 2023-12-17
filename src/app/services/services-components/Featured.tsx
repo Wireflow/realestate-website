@@ -22,7 +22,7 @@ const Featured = (props: Props) => {
         <div className="">
           <Header
             action={false}
-            title="Featured Properties"
+            title="Featured Property"
             description="Discover dream-worthy homes in our featured properties collection."
           />
           <div className=" flex flex-col gap-8 items-start">

@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   const path = usePathname();
 
   return (
-    <nav className=" bg-white border-b-2 border-gray-150 flex justify-between w-full">
+    <nav className=" bg-white flex justify-between w-full">
       <div className="py-8 px-8 lg:px-20 flex gap-24 items-center w-full">
         <div>
           <Logo className="text-black" />

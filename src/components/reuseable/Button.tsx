@@ -2,8 +2,11 @@ import React, { ButtonHTMLAttributes } from "react";
 import { Button as ShadButton } from "../ui/button";
 import { twMerge } from "tailwind-merge";
 
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  buttonStyle?: "yellow" | "blue" | "outline" | "lightblue";
+export type ButtonStyle = "yellow" | "blue" | "outline" | "lightblue";
+
+export interface CustomButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  buttonStyle?: ButtonStyle;
   className?: string;
   children?: string;
 }

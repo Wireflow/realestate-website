@@ -6,6 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import links from "../../data/nav-links.json";
@@ -24,7 +25,7 @@ const MobileNavbar = (props: Props) => {
     <Sheet>
       <SheetTrigger className="static md:absolute md:bottom-8 md:right-8 lg:hidden">
         <Menu className="w-12 h-12 md:hidden block text-darker-blue mr-8" />
-        <div className="md:block hidden bg-dark-blue p-2 rounded-xl">
+        <div className="md:block hidden z-[50] bg-dark-blue right-10 bottom-10 p-2 rounded-xl fixed">
           <Menu className="w-12 h-12 text-white" />
         </div>
       </SheetTrigger>

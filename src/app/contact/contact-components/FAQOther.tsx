@@ -9,7 +9,7 @@ const FAQOther = (props: Props) => {
   return (
     <div className="flex-[0.5] flex flex-col items-center md:items-start">
       <Image
-        src={"/listing-image-1.jpg"}
+        src={"/FaqImage.webp"}
         className="rounded-xl object-cover mb-6"
         alt="test"
         width={1000}
