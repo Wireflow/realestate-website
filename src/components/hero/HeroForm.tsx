@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "../ui/form";
 import {
   Card,
@@ -16,10 +16,12 @@ import Field from "../form/Field";
 import Select from "../form/Select";
 import { preferences } from "@/types/inquiry";
 import Button from "../reuseable/Button";
+import sendInquiry from "@/use-cases/sendInquiry";
 
 type Props = {};
 
 const HeroForm = (props: Props) => {
+  const [error, setError] = useState<string | undefined>(undefined);
   const form = useForm<Inquiry>({
     resolver: zodResolver(InquirySchema),
     defaultValues: {
@@ -31,10 +33,21 @@ const HeroForm = (props: Props) => {
     },
   });
 
-  const { handleSubmit, control, setValue, getValues } = form;
+  const {
+    handleSubmit,
+    control,
+    setValue,
+    formState: { isSubmitSuccessful, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: Inquiry) => {
-    console.log(data);
+  const onSubmit = async (data: Inquiry) => {
+    try {
+      setError(undefined);
+      const inquiry = await sendInquiry(data);
+    } catch (error) {
+      console.error(error);
+      setError("Something went wrong!");
+    }
   };
 
   return (
@@ -82,9 +95,15 @@ const HeroForm = (props: Props) => {
                 setValue("budget", parseInt(v.target.value));
               }}
             />
-            <Button buttonStyle="blue" className="w-full py-8 mt-4">
+            <Button
+              disabled={isSubmitting}
+              buttonStyle="blue"
+              className="w-full py-8 mt-4"
+            >
               Get Inquiry
             </Button>
+            {error ? <p className="text-red-500 text-base">{error}</p> : null}
+            {isSubmitSuccessful ? <p>Message sent successfully!</p> : null}
           </form>
         </Form>
       </CardContent>
