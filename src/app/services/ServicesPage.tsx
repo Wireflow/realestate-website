@@ -15,7 +15,7 @@ const ServicesPage = (props: Props) => {
       <Discover />
       <Sell />
       <Video />
-      <Agents />
+      {/* <Agents /> */}
       <Featured />
     </>
   );

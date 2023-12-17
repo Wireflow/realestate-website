@@ -16,60 +16,32 @@ const Agents = (props: Props) => {
       />
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 justify-center items-center gap-10">
         <Card
-          CardDescriptionStyle=" text-sm font-medium"
-          CardTitleStyle=" text-[20px] font-semibold"
-          IconContainerStyle=""
-          CardContainerStyle="flex flex-col gap-3 justify-center items-start w-full"
           image="agent1.jpg"
           Title="Mustafa Jajeh"
           Description="Senior Agent"
           ButtonText="Contact Agent"
           ButtonType="outline"
-          ImageWidth={300}
-          ImageHeight={400}
-          ImageStyle="rounded-xl"
         />
         <Card
-          CardDescriptionStyle=" text-sm font-medium"
-          CardTitleStyle=" text-[20px] font-semibold"
-          IconContainerStyle=""
-          CardContainerStyle="flex flex-col gap-3 justify-center items-start"
           image="agent2.jpg"
           Title="Mustafa Jajeh"
           Description="Senior Agent"
           ButtonText="Contact Agent"
           ButtonType="outline"
-          ImageWidth={300}
-          ImageHeight={400}
-          ImageStyle="rounded-xl"
         />
         <Card
-          CardDescriptionStyle=" text-sm font-medium"
-          CardTitleStyle=" text-[20px] font-semibold"
-          IconContainerStyle=""
-          CardContainerStyle="flex flex-col gap-3 justify-center items-start"
           image="agent3.jpg"
           Title="Mustafa Jajeh"
           Description="Senior Agent"
           ButtonText="Contact Agent"
           ButtonType="outline"
-          ImageWidth={300}
-          ImageHeight={400}
-          ImageStyle="rounded-xl"
         />
         <Card
-          CardDescriptionStyle=" text-sm font-medium"
-          CardTitleStyle=" text-[20px] font-semibold"
-          IconContainerStyle=""
-          CardContainerStyle="flex flex-col gap-3 justify-center items-start "
           image="agent4.jpg"
           Title="Mustafa Jajeh"
           Description="Senior Agent"
           ButtonText="Contact Agent"
           ButtonType="outline"
-          ImageWidth={300}
-          ImageHeight={400}
-          ImageStyle="rounded-xl"
         />
       </div>
     </Section>

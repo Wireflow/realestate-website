@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import { twMerge } from "tailwind-merge";
 
 type CardProps = {
   ButtonType?: "yellow" | "blue" | "outline" | "lightblue";
@@ -8,43 +9,31 @@ type CardProps = {
   Title?: string;
   Description?: string;
   image?: string;
-  CardContainerStyle?: string;
-  IconContainerStyle?: string;
-  CardTitleStyle?: string;
-  CardDescriptionStyle?: string;
-  ImageWidth?: number;
-  ImageHeight?: number;
-  ImageStyle?: string;
+  className?: string;
 };
 
 const Card = ({
   ButtonType,
   ButtonText,
-  ImageStyle,
   Title,
   Description,
-  ImageWidth,
-  ImageHeight,
   image,
-  CardContainerStyle,
-  IconContainerStyle,
-  CardTitleStyle,
-  CardDescriptionStyle,
+  className,
 }: CardProps) => {
   return (
-    <div className={CardContainerStyle}>
-      <div className={IconContainerStyle}>
+    <div className={twMerge('flex flex-col gap-3 justify-center items-center w-full border p-10 rounded-2xl', className)}>
+      <div className={twMerge('p-4 rounded-full bg-gray-200', className)} >
         <Image
-          className={ImageStyle}
+          className={twMerge(' p-1', className)}
           src={`/${image}`}
-          width={ImageWidth}
-          height={ImageHeight}
+          width={40}
+          height={40}
           alt="service-icon"
         />
       </div>
-      <div>
-        <h2 className={CardTitleStyle}>{Title}</h2>
-        <p className={CardDescriptionStyle}>{Description}</p>
+      <div className={twMerge('text-center', className)}>
+        <h2 className={twMerge('text-[20px] font-semibold', className)}>{Title}</h2>
+        <p className={twMerge('text-sm font-medium', className)}>{Description}</p>
       </div>
       <Button className="p-5" buttonStyle={ButtonType}>
         {ButtonText}
