@@ -11,8 +11,11 @@ const Hero = (props: Props) => {
   const { mainImage } = agent.images.hero;
 
   return (
-    <Section backgroundImage={mainImage} className="bg-no-repeat bg-cover">
-      <div className="flex flex-col gap-10 justify-center z-10 w-full md:gap-20 lg:flex-row lg:gap-40">
+    <Section
+      backgroundImage={mainImage}
+      className="bg-no-repeat bg-top bg-cover"
+    >
+      <div className="flex flex-col gap-10 justify-center z-10 w-full md:gap-20 lg:flex-row lg:gap-20">
         <HeroText />
         <HeroForm />
       </div>

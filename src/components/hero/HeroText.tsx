@@ -12,7 +12,7 @@ const HeroText = (props: Props) => {
         <Agency className="font-medium" />
         <p className="ml-1 font-medium">Real Estate Agent</p>
       </p>
-      <h1 className="text-4xl md:text-[4.3rem] tracking-wider leading-[40px] md:leading-[90px] font-semibold mt-4">
+      <h1 className="text-5xl xl:text-[4.3rem]  tracking-wider leading-[60px] lg:whitespace-nowrap md:leading-[80px] font-semibold mt-4">
         Find Your Dream
         <br /> Home Today
       </h1>

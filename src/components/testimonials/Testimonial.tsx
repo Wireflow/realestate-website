@@ -21,7 +21,7 @@ const Testimonial = ({ review, name, stars = 5 }: TestimonialProps) => {
       <CardContent className="flex flex-col gap-2">
         <p className="text-sm ">{review}</p>
         <div className="flex items-center gap-4 mt-4">
-          <div className=" bg-dark-blue w-fit p-3 rounded-full">
+          <div className=" bg-dark-blue w-fit rounded-full">
             <UserCircle className="text-white w-10 h-10" />
           </div>
           <h1 className="font-bold text-2xl">{name}</h1>
