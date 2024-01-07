@@ -3,7 +3,7 @@
 import { agent } from "@/data/branding/agent-data";
 import Section from "../reuseable/Section";
 import Header from "../reuseable/Header";
-import Testimonial from "./Testimonial";
+import Testimonial from "./Testimonial"; 
 import reviews from "../../data/Reviews.json";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ type Props = {};
 
 const Testimonials = (props: Props) => {
   const { desktop, mobile } = agent.images.testimonials;
-
+ 
   return (
     <Section background="light-blue">
       <Header
