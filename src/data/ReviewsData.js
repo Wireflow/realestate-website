@@ -18,12 +18,7 @@ export const ReviewsData = [
       name: "Elena Rodriguez",
       review:
         "Bangoonan is the best! Their dedication to customer satisfaction is commendable. I'm grateful for their assistance and expertise.",
-    },
-    {
-      name: "Michael Smith",
-      review:
-        "I've been a client of Bangoonan for several years, and they consistently deliver top-notch service. Trustworthy and reliable.",
-    },
+    }
   ];
   
   
