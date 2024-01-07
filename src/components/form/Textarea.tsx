@@ -8,7 +8,7 @@ import {
   FormControl,
   FormDescription,
   FormField,
-  FormItem,
+  FormItem, 
   FormLabel,
   FormMessage,
 } from "../ui/form";
@@ -19,7 +19,7 @@ interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   control: any;
   name: FieldPath<Inquiry | Contact>;
   label?: string;
-  size?: number;
+  size?: number; 
   description?: string;
   labelStyle?: string;
   className?: string;
@@ -34,7 +34,7 @@ interface FieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 const Textarea = ({
   control,
   name,
-  label,
+  label, 
   rules,
   description,
   labelStyle,
