@@ -59,7 +59,7 @@ const Select = ({
         <FormItem>
           <FormLabel className={labelStyle}>{label}</FormLabel>
           <FormControl>
-            <ShadSelect onValueChange={field.onChange} {...field}>
+            <ShadSelect onValueChange={field.onChange} {...field} value={field.value as string}>
               <SelectTrigger
                 className={`py-6 ${
                   options?.includes(field.value as string)
