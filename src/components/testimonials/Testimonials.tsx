@@ -4,7 +4,7 @@ import { agent } from "@/data/branding/agent-data";
 import Section from "../reuseable/Section";
 import Header from "../reuseable/Header";
 import Testimonial from "./Testimonial"; 
-import reviews from "../../data/Reviews.json";
+import Reviews from '../../data/Reviews.json'
 import Image from "next/image";
 
 type Props = {};
@@ -38,7 +38,7 @@ const Testimonials = (props: Props) => {
           className="block xl:hidden rounded-xl max-h-[250px]  object-cover border-2"
         />
         <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-          {reviews.map((review, index) => (
+          {Reviews.map((review, index) => (
             <Testimonial
               name={review.name}
               review={review.review}
